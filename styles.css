@@ -1,0 +1,115 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Create an animated gradient background */
+body {
+    background: linear-gradient(45deg, #FFC107, #FF9800, #FF5722, #E91E63, #9C27B0, #673AB7, #3F51B5, #2196F3, #03A9F4, #00BCD4, #009688, #4CAF50);
+    background-size: 400% 400%;
+    animation: gradientAnimation 15s linear infinite;
+    font-family: Arial, sans-serif;
+    color: white;
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Style the container */
+.container {
+    text-align: center;
+    margin-top: 50px;
+}
+
+/* Style the animated elements */
+.animated {
+    animation: fadeInUp 1s;
+}
+
+/* Style the header */
+.header {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Style the "Made By" text with animation */
+.made-by {
+    font-size: 14px;
+    color: #f9f9f9;
+    margin-top: 5px;
+    animation: fadeIn 1s;
+}
+
+/* Style the search container */
+.search-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+/* Style the input */
+#search-input {
+    width: 300px;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px 0 0 5px;
+    margin-right: -1px; /* Overlapping border fix */
+}
+
+/* Style the search button with animation */
+#search-button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    animation: fadeIn 1s;
+}
+
+#search-button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+/* Style the result div */
+#result {
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+/* Define the fadeIn animation */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Define the fadeInUp animation */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
